@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Camp - Empowering Education for Every Child in Nigeria</title>
+    <meta name="description"
+        content="Learning Camp Initiative is dedicated to providing quality foundational education opportunities for underprivileged children across Nigeria, breaking the cycle of poverty through inclusive, evidence-based learning programs.">
+    <meta name="author" content="Learning Camp Initiative">
+    <meta name="keywords"
+        content="education, Nigeria, children, literacy, numeracy, TaRL, learning, nonprofit, foundation">
+
+    <meta property="og:title" content="Learning Camp - Empowering Education for Every Child in Nigeria">
+    <meta property="og:description"
+        content="Transforming lives through quality foundational education. We're dedicated to ensuring every Nigerian child has access to the education they deserve using proven TaRL methodology.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@learningcamp">
+    <meta name="twitter:title" content="Learning Camp - Empowering Education for Every Child">
+    <meta name="twitter:description"
+        content="Closing the learning gap through practical, inclusive education programs in Nigeria">
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
+
+    <link rel="canonical" href="https://learningcamp.org">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#f59e0b', /* amber-500 */
+                            foreground: '#ffffff',
+                            light: '#fbbf24',   /* amber-400 */
+                            dark: '#b45309',    /* amber-700 */
+                        },
+                        secondary: {
+                            DEFAULT: 'hsl(212, 95%, 52%)',
+                            foreground: 'hsl(0, 0%, 100%)',
+                            light: 'hsl(212, 85%, 62%)',
+                            dark: 'hsl(212, 100%, 42%)',
+                        },
+                        accent: {
+                            DEFAULT: 'hsl(45, 93%, 47%)',
+                            foreground: 'hsl(215, 25%, 15%)',
+                            light: 'hsl(45, 93%, 57%)',
+                        },
+                        muted: {
+                            DEFAULT: 'hsl(210, 20%, 96%)',
+                            foreground: 'hsl(215, 16%, 47%)',
+                        },
+                        background: 'hsl(0, 0%, 100%)',
+                        foreground: 'hsl(215, 25%, 15%)',
+                        border: 'hsl(214, 32%, 91%)',
+                    },
+                    backgroundImage: {
+                        'gradient-hero': 'linear-gradient(135deg, hsl(142, 76%, 36%) 0%, hsl(212, 95%, 52%) 100%)',
+                        'gradient-section': 'linear-gradient(180deg, hsl(210, 20%, 96%) 0%, hsl(0, 0%, 100%) 100%)',
+                        'gradient-card': 'linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(210, 20%, 96%) 100%)',
+                        'gradient-premium': 'linear-gradient(135deg, hsl(142, 56%, 46%) 0%, hsl(212, 85%, 62%) 50%, hsl(45, 93%, 57%) 100%)',
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 6px -1px hsl(142, 76%, 36%, 0.1), 0 2px 4px -1px hsl(142, 76%, 36%, 0.06)',
+                        'medium': '0 10px 15px -3px hsl(142, 76%, 36%, 0.1), 0 4px 6px -2px hsl(142, 76%, 36%, 0.05)',
+                        'large': '0 20px 25px -5px hsl(142, 76%, 36%, 0.1), 0 10px 10px -5px hsl(142, 76%, 36%, 0.04)',
+                        'premium': '0 25px 50px -12px hsl(142, 76%, 36%, 0.25)',
+                        'glow': '0 0 40px hsl(142, 76%, 36%, 0.15)',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-in-top': 'slideInTop 1s ease-out',
+                        'slide-in-bottom': 'slideInBottom 1s ease-out',
+                        'slide-in-left': 'slideInLeft 1s ease-out',
+                        'slide-in-right': 'slideInRight 1s ease-out',
+                        'bounce-custom': 'bounceCustom 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideInTop: {
+                            '0%': { transform: 'translateY(-30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        slideInBottom: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        slideInLeft: {
+                            '0%': { transform: 'translateX(-30px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' }
+                        },
+                        slideInRight: {
+                            '0%': { transform: 'translateX(30px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' }
+                        },
+                        bounceCustom: {
+                            '0%': { transform: 'scale(0.8)', opacity: '0' },
+                            '50%': { transform: 'scale(1.05)', opacity: '0.8' },
+                            '100%': { transform: 'scale(1)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .animate-delay-200 {
+            animation-delay: 200ms;
+        }
+
+        .animate-delay-300 {
+            animation-delay: 300ms;
+        }
+
+        .animate-delay-400 {
+            animation-delay: 400ms;
+        }
+
+        .animate-delay-500 {
+            animation-delay: 500ms;
+        }
+
+        .animate-delay-700 {
+            animation-delay: 700ms;
+        }
+
+        .btn-hero {
+            background: linear-gradient(135deg, hsl(142, 76%, 36%) 0%, hsl(212, 95%, 52%) 100%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-hero:hover {
+            box-shadow: 0 0 40px hsl(142, 76%, 36%, 0.15);
+            transform: scale(1.05);
+        }
+
+        .btn-premium {
+            background: linear-gradient(135deg, hsl(142, 56%, 46%) 0%, hsl(212, 85%, 62%) 50%, hsl(45, 93%, 57%) 100%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-premium:hover {
+            box-shadow: 0 25px 50px -12px hsl(142, 76%, 36%, 0.25);
+            transform: scale(1.05);
+        }
+
+        .btn-outline-premium {
+            border: 2px solid hsl(142, 76%, 36%);
+            color: hsl(142, 76%, 36%);
+            background: transparent;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-outline-premium:hover {
+            background: hsl(142, 76%, 36%);
+            color: hsl(0, 0%, 100%);
+            box-shadow: 0 10px 15px -3px hsl(142, 76%, 36%, 0.1);
+            transform: scale(1.05);
+        }
+
+        .card-premium {
+            background: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(210, 20%, 96%) 100%);
+            box-shadow: 0 20px 25px -5px hsl(142, 76%, 36%, 0.1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-premium:hover {
+            box-shadow: 0 25px 50px -12px hsl(142, 76%, 36%, 0.25);
+            transform: translateY(-5px);
+        }
+
+        /* .hero-bg {
+            background: linear-gradient(135deg, hsl(142, 76%, 36%) 0%, hsl(212, 95%, 52%) 100%);
+        }
+
+        .section-bg {
+            background: linear-gradient(180deg, hsl(210, 20%, 96%) 0%, hsl(0, 0%, 100%) 100%);
+        } */
+
+
+        .team-image-innocent {
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" fill="%23059669"/><circle cx="256" cy="200" r="80" fill="%23ffffff" opacity="0.9"/><rect x="176" y="280" width="160" height="200" rx="20" fill="%23ffffff" opacity="0.9"/><text x="256" y="450" text-anchor="middle" font-family="Arial" font-size="24" fill="%23065f46">IW</text></svg>');
+        }
+
+        .team-image-blessing {
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" fill="%23059669"/><circle cx="256" cy="200" r="80" fill="%23ffffff" opacity="0.9"/><rect x="176" y="280" width="160" height="200" rx="20" fill="%23ffffff" opacity="0.9"/><text x="256" y="450" text-anchor="middle" font-family="Arial" font-size="24" fill="%23065f46">BO</text></svg>');
+        }
+
+        .program-image {
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect width="800" height="600" fill="%23059669"/><rect x="100" y="150" width="600" height="300" rx="20" fill="%23ffffff" opacity="0.9"/><circle cx="200" cy="250" r="30" fill="%23065f46"/><circle cx="300" cy="250" r="30" fill="%23065f46"/><circle cx="400" cy="250" r="30" fill="%23065f46"/><rect x="150" y="320" width="500" height="20" rx="10" fill="%23065f46" opacity="0.6"/><rect x="150" y="360" width="400" height="20" rx="10" fill="%23065f46" opacity="0.4"/></svg>');
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-background font-sans">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 z-50 w-full border-b border-gray-200 shadow-soft">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div class="flex items-center">
+                    <h1
+                        class="text-2xl font-bold text-primary hover:text-primary-light transition-colors cursor-pointer">
+                        <a href="/" style="text-decoration: none;">
+                            <h1 style="
+    color: black; 
+    font-size: 28px; 
+    font-family: sans-serif; 
+    font-weight: bold; 
+    margin: 0; 
+    transition: color 0.3s;" onmouseover="this.style.color='#b22222'" onmouseout="this.style.color='black'">
+                                HERitage&reg;
+                            </h1>
+                        </a>
+                    </h1>
+                </div>
+
+                <nav class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about"
+                            class="nav-link text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all uration-300 hover:bg-amber-50">About</a>
+                        <a href="#calendar"
+                            class="nav-link text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all uration-300 hover:bg-amber-50">Calendar</a>
+                        <a href="#contact"
+                            class="nav-link text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all uration-300 hover:bg-amber-50">Contact</a>
+                        <a href="#press"
+                            class="nav-link text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-all uration-300 hover:bg-amber-50">Press</a>
+
+                </nav>
+
+
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-foreground hover:text-primary p-2 transition-colors">
+                        <i data-lucide="menu" class="h-6 w-6" id="menu-icon"></i>
+                        <i data-lucide="x" class="h-6 w-6 hidden" id="close-icon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-4 py-6 space-y-4 bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-large">
+                    <a href="#about"
+                        class="mobile-nav-link block px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors">About</a>
+                    <a href="#calendar"
+                        class="mobile-nav-link block px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors">Calendar</a>
+                    <a href="#contact"
+                        class="mobile-nav-link block px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors">Contact</a>
+                    <a href="#press"
+                        class="mobile-nav-link block px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors">Press</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+
+        <div class="absolute inset-0 z-0">
+            <img src="/images/Gemini_Generated_Image_et268iet268iet26.png" alt="African Women Leaders"
+                class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-6 text-center max-w-4xl">
+
+            <span
+                class="inline-block py-1 px-3 mb-6 rounded-full bg-yellow-500/20 text-yellow-300 text-sm font-semibold tracking-wider border border-yellow-500/30">
+                DEBUTING AT UNGA
+            </span>
+
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight">
+                HERitage Collective
+            </h1>
+
+            <div class="space-y-6 text-lg md:text-2xl leading-relaxed text-gray-100 font-light">
+                <p>
+                    HERitage Collective is proud to debut <strong class="text-white font-bold">HERitage House</strong>,
+                    our
+                    launchpad for African women leaders and their champions on the sidelines of UNGA. We will gather
+                    Africa’s most dynamic women leaders and global allies for two powerful days of ideas, influence,
+                    and investment.
+                </p>
+
+
+            </div>
+
+            <div class="mt-10">
+                <a href="#register"
+                    class="inline-block bg-white text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-yellow-50 hover:text-yellow-600 transition duration-300 shadow-lg transform hover:-translate-y-1">
+                    Join the Movement
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <div id="calendar" class="w-full flex justify-center py-12 ">
+
+        <div
+            class="bg-gray-900 w-[80%] max-w-7xl text-white rounded-xl shadow-2xl overflow-hidden border border-gray-800 mt-10">
+
+            <div class="p-8 border-b border-gray-800 bg-gray-900">
+                <h4 class="text-3xl font-light tracking-wide text-white">
+                    2026 Calendar of <span class="font-bold text-amber-500">Activation</span>
+                </h4>
+                <p class="text-gray-400 mt-2 text-sm uppercase tracking-widest">Global Events & Convenings</p>
+            </div>
+
+            <div class="divide-y divide-gray-800">
+
+                <a href="#" class="group block p-6 hover:bg-gray-800 transition duration-300 ease-in-out">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-6">
+                            <div
+                                class="flex flex-col items-center justify-center w-16 h-16 rounded-lg bg-gray-800 group-hover:bg-gray-700 transition border border-gray-700">
+                                <span class="text-xs text-gray-400 uppercase">Jan</span>
+                                <span class="text-lg font-bold text-white">26</span>
+                            </div>
+
+                            <div>
+                                <h5 class="text-xl font-medium text-white group-hover:text-amber-500 transition">
+                                    HERitage X Davos</h5>
+                                <p class="text-sm text-gray-400 mt-1">World Economic Forum • Switzerland</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="text-gray-600 group-hover:text-amber-500 transform group-hover:translate-x-2 transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M5 12h14" />
+                                <path d="m12 5 7 7-7 7" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="group block p-6 hover:bg-gray-800 transition duration-300 ease-in-out">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-6">
+                            <div
+                                class="flex flex-col items-center justify-center w-16 h-16 rounded-lg bg-gray-800 group-hover:bg-gray-700 transition border border-gray-700">
+                                <span class="text-xs text-gray-400 uppercase">Mar</span>
+                                <span class="text-lg font-bold text-white">08</span>
+                            </div>
+                            <div>
+                                <h5 class="text-xl font-medium text-white group-hover:text-amber-500 transition">
+                                    HERitage X UNCSW</h5>
+                                <p class="text-sm text-gray-400 mt-1">Commission on the Status of Women • NYC</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="text-gray-600 group-hover:text-amber-500 transform group-hover:translate-x-2 transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M5 12h14" />
+                                <path d="m12 5 7 7-7 7" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="group block p-6 hover:bg-gray-800 transition duration-300 ease-in-out">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-6">
+                            <div
+                                class="flex flex-col items-center justify-center w-16 h-16 rounded-lg bg-gray-800 group-hover:bg-gray-700 transition border border-gray-700">
+                                <span class="text-xs text-gray-400 uppercase">Sep</span>
+                                <span class="text-lg font-bold text-white">TBD</span>
+                            </div>
+                            <div>
+                                <h5 class="text-xl font-medium text-white group-hover:text-amber-500 transition">
+                                    HERitage X UNGA</h5>
+                                <p class="text-sm text-gray-400 mt-1">General Assembly • New York</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="text-gray-600 group-hover:text-amber-500 transform group-hover:translate-x-2 transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M5 12h14" />
+                                <path d="m12 5 7 7-7 7" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="group block p-6 hover:bg-gray-800 transition duration-300 ease-in-out">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-6">
+                            <div
+                                class="flex flex-col items-center justify-center w-16 h-16 rounded-lg bg-gray-800 group-hover:bg-gray-700 transition border border-gray-700">
+                                <span class="text-xs text-gray-400 uppercase">Sep</span>
+                                <span class="text-lg font-bold text-white">TBD</span>
+                            </div>
+                            <div>
+                                <h5 class="text-xl font-medium text-white group-hover:text-amber-500 transition">
+                                    HERitage X UNGA</h5>
+                                <p class="text-sm text-gray-400 mt-1">General Assembly • New York</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="text-gray-600 group-hover:text-amber-500 transform group-hover:translate-x-2 transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M5 12h14" />
+                                <path d="m12 5 7 7-7 7" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="group block p-6 hover:bg-gray-800 transition duration-300 ease-in-out">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-6">
+                            <div
+                                class="flex flex-col items-center justify-center w-16 h-16 rounded-lg bg-gray-800 group-hover:bg-gray-700 transition border border-gray-700">
+                                <span class="text-xs text-gray-400 uppercase">Sep</span>
+                                <span class="text-lg font-bold text-white">TBD</span>
+                            </div>
+                            <div>
+                                <h5 class="text-xl font-medium text-white group-hover:text-amber-500 transition">
+                                    HERitage X UNGA</h5>
+                                <p class="text-sm text-gray-400 mt-1">General Assembly • New York</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="text-gray-600 group-hover:text-amber-500 transform group-hover:translate-x-2 transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M5 12h14" />
+                                <path d="m12 5 7 7-7 7" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <div class="w-full flex justify-center py-12 " id="about">
+        <div class="w-[80%] max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mt-10">
+
+            <div
+                class="border border-gray-200 bg-white rounded-2xl p-6 text-center hover:border-amber-500 hover:shadow-xl transition duration-300 group transform hover:scale-105 hover:z-10">
+                <h3 class="text-4xl font-bold text-gray-900 group-hover:text-amber-500 mb-2">54</h3>
+                <p class="text-sm font-semibold uppercase tracking-wider text-gray-500">Countries Represented</p>
+                <p class="text-xs text-gray-400 mt-2">Pan-African Reach</p>
+            </div>
+
+            <div
+                class="border border-gray-200 bg-white rounded-2xl p-6 text-center hover:border-amber-500 hover:shadow-xl transition duration-300 group transform hover:scale-105 hover:z-10">
+                <h3 class="text-4xl font-bold text-gray-900 group-hover:text-amber-500 mb-2">5k+</h3>
+                <p class="text-sm font-semibold uppercase tracking-wider text-gray-500">Women Leaders</p>
+                <p class="text-xs text-gray-400 mt-2">Active Network</p>
+            </div>
+
+            <div
+                class="border border-gray-200 bg-white rounded-2xl p-6 text-center hover:border-amber-500 hover:shadow-xl transition duration-300 group transform hover:scale-105 hover:z-10">
+                <h3 class="text-4xl font-bold text-gray-900 group-hover:text-amber-500 mb-2">$10M</h3>
+                <p class="text-sm font-semibold uppercase tracking-wider text-gray-500">Capital Mobilized</p>
+                <p class="text-xs text-gray-400 mt-2">For Women-Led SMEs</p>
+            </div>
+
+            <div
+                class="border border-gray-200 bg-white rounded-2xl p-6 text-center hover:border-amber-500 hover:shadow-xl transition duration-300 group transform hover:scale-105 hover:z-10">
+                <h3 class="text-4xl font-bold text-gray-900 group-hover:text-amber-500 mb-2">12</h3>
+                <p class="text-sm font-semibold uppercase tracking-wider text-gray-500">Global Convenings</p>
+                <p class="text-xs text-gray-400 mt-2">From Davos to NYC</p>
+            </div>
+
+            <div
+                class="border border-gray-200 bg-white rounded-2xl p-6 text-center hover:border-amber-500 hover:shadow-xl transition duration-300 group transform hover:scale-105 hover:z-10">
+                <h3 class="text-4xl font-bold text-gray-900 group-hover:text-amber-500 mb-2">100%</h3>
+                <p class="text-sm font-semibold uppercase tracking-wider text-gray-500">Impact Driven</p>
+                <p class="text-xs text-gray-400 mt-2">Sustainable Growth</p>
+            </div>
+
+        </div>
+    </div>
+    <style>
+        /* Custom Animation for the infinite scroll */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-scroll {
+            animation: scroll 20s linear infinite;
+        }
+    </style>
+
+    <div class="w-full flex justify-center py-16 bg-white">
+        <div class="w-[80%] max-w-7xl flex flex-col lg:flex-row items-center gap-12">
+
+            <div class="lg:w-1/4 text-center lg:text-left shrink-0">
+                <h3 class="text-3xl font-light text-gray-900 uppercase tracking-widest">
+                    Our <span class="font-bold text-amber-500">Partners</span>
+                </h3>
+                <div class="h-1 w-12 bg-amber-500 mt-4 mx-auto lg:mx-0"></div>
+            </div>
+
+            <div class="relative flex-1 overflow-hidden w-full group">
+
+                <div class="absolute top-0 left-0 z-10 h-full w-20 bg-gradient-to-r from-white to-transparent"></div>
+                <div class="absolute top-0 right-0 z-10 h-full w-20 bg-gradient-to-l from-white to-transparent"></div>
+
+                <div class="flex items-center gap-16 animate-scroll w-[200%] hover:[animation-play-state:paused]">
+
+                    <div class="flex items-center gap-16 justify-around w-1/2">
+                        <img src="./images/Busines.png" alt="Partner 1"
+                            class="h-12 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                        <img src="./images/moneda.png" alt="Partner 2"
+                            class="h-12 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                        <img src="./images/pulse.png" alt="Partner 3"
+                            class="h-12 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                        <img src="./images/conduct.png" alt="Partner 4"
+                            class="h-12 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                    </div>
+
+                    <div class="flex items-center gap-16 justify-around w-1/2">
+                        <img src="/images/Busines.png" alt="Partner 1"
+                            class="h-12 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                        <img src="/images/moneda.png" alt="Partner 2"
+                            class="h-12 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                        <img src="/images/pulse.png" alt="Partner 3"
+                            class="h-12 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                        <img src="/images/conduct.png" alt="Partner 4"
+                            class="h-12 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="w-full flex justify-center py-16 bg-gray-50">
+        <div class="w-[80%] max-w-7xl">
+
+            <div
+                class="flex flex-col lg:flex-row bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+
+                <div class="relative lg:w-2/5 shrink-0 min-h-[400px] lg:min-h-full">
+                    <img src="/images/boss.avif" alt="Founder Name"
+                        class="absolute inset-0 w-full h-full object-cover object-center" />
+                </div>
+
+                <div class="relative p-8 lg:p-16 lg:w-3/5 flex flex-col justify-center">
+
+                    <div class="text-amber-500/10 absolute top-6 left-6 pointer-events-none select-none">
+                        <svg width="150" height="150" viewBox="0 0 24 24" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.570 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                        </svg>
+                    </div>
+
+                    <div class="relative z-10">
+                        <blockquote class="text-2xl lg:text-3xl font-serif italic leading-relaxed text-gray-800">
+                            "We established this convening not just to connect, but to catalyze. When you bring Africa’s
+                            most dynamic women leaders into one room, the resulting energy doesn't just inspire
+                            change—it demands it."
+                        </blockquote>
+
+                        <div class="mt-8 border-l-4 border-amber-500 pl-6">
+                            <h4 class="text-xl font-bold text-gray-900">Haibibah A. Waziri</h4>
+                            <p class="text-amber-600 font-medium mt-1">Founder & Convener, The HERitage Collective</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="w-full flex justify-center py-16 bg-white">
+        <div class="w-[80%] max-w-7xl text-center">
+
+            <div class="mb-12">
+                <h3 class="text-3xl font-light text-gray-900 uppercase tracking-widest">
+                    The <span class="font-bold text-amber-500">Conveners</span>
+                </h3>
+                <div class="h-1 w-12 bg-amber-500 mt-4 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+
+                <div class="group flex flex-col items-center">
+                    <div
+                        class="relative w-48 h-48 mb-6 rounded-3xl overflow-hidden border-2 border-gray-100 transition duration-500 ease-in-out shadow-lg transform group-hover:scale-110 group-hover:shadow-2xl group-hover:shadow-gray-400/50">
+                        <img src="/images/boss.avif" alt="Team Member"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-gray-600 transition">Haibibah A. Waziri
+                    </h4>
+                    <p class="text-sm font-medium text-gray-400 uppercase tracking-wide mt-1">Managing Director, BGR
+                        Nigeria | Global</p>
+                </div>
+
+                <div class="group flex flex-col items-center">
+                    <div
+                        class="relative w-48 h-48 mb-6 rounded-3xl overflow-hidden border-2 border-gray-100 transition duration-500 ease-in-out shadow-lg transform group-hover:scale-110 group-hover:shadow-2xl group-hover:shadow-gray-400/50">
+                        <img src="/images/sally.avif" alt="Team Member"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-gray-600 transition">Sally Nnamani</h4>
+                    <p class="text-sm font-medium text-gray-400 uppercase tracking-wide mt-1">Social Entrepreneur
+                        Nigeria | USA</p>
+                </div>
+
+                <div class="group flex flex-col items-center">
+                    <div
+                        class="relative w-48 h-48 mb-6 rounded-3xl overflow-hidden border-2 border-gray-100 transition duration-500 ease-in-out shadow-lg transform group-hover:scale-110 group-hover:shadow-2xl group-hover:shadow-gray-400/50">
+                        <img src="/images/sandrine.avif" alt="Team Member"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-gray-600 transition">Sandrine Nzeukou
+                    </h4>
+                    <p class="text-sm font-medium text-gray-400 uppercase tracking-wide mt-1">Founder, Playbook Cameroon
+                        | Global</p>
+                </div>
+
+                <div class="group flex flex-col items-center">
+                    <div
+                        class="relative w-48 h-48 mb-6 rounded-3xl overflow-hidden border-2 border-gray-100 transition duration-500 ease-in-out shadow-lg transform group-hover:scale-110 group-hover:shadow-2xl group-hover:shadow-gray-400/50">
+                        <img src="/images/hug.avif" alt="Team Member"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-gray-600 transition">Huguette Umutoni
+                    </h4>
+                    <p class="text-sm font-medium text-gray-400 uppercase tracking-wide mt-1">Founder, N'gage Africa
+                        Rwanda | Europe
+
+                    </p>
+                </div>
+
+                <div class="group flex flex-col items-center">
+                    <div
+                        class="relative w-48 h-48 mb-6 rounded-3xl overflow-hidden border-2 border-gray-100 transition duration-500 ease-in-out shadow-lg transform group-hover:scale-110 group-hover:shadow-2xl group-hover:shadow-gray-400/50">
+                        <img src="https://via.placeholder.com/200?text=Member+5" alt="Team Member"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-gray-600 transition">Fatima B.</h4>
+                    <p class="text-sm font-medium text-gray-400 uppercase tracking-wide mt-1">Program Manager</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="w-full flex justify-center py-16 bg-gray-50" id="contact">
+        <div class="w-[80%] max-w-7xl mt-10">
+
+            <div class="mb-12 text-center lg:text-left">
+                <h3 class="text-3xl font-light text-gray-900 uppercase tracking-widest">
+                    Get in <span class="font-bold text-amber-500">Touch</span>
+                </h3>
+                <div class="h-1 w-12 bg-amber-500 mt-4 mx-auto lg:mx-0"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="text-2xl font-serif text-gray-900 mb-4">Let's build the future together.</h4>
+                        <p class="text-gray-600 leading-relaxed">
+                            Whether you are interested in partnering with us, volunteering your time, or simply want to
+                            learn more about our upcoming convenings, we would love to hear from you.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="size-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                </svg>
+                            </div>
+                            <p class="text-gray-700">info@heritagecollectiv.com</p>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="size-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                            </div>
+                            <p class="text-gray-700">Lagos, Nigeria & New York, USA</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+                    <form id="contact-form" class="space-y-6" method="POST"
+                        action="https://formsubmit.co/39d25dba5e91c070b9b69e566f1f4035" target="hidden-iframe"
+                        onsubmit="showThankYouModal()">
+
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="box">
+                        <input type="hidden" name="_subject" value="New Contact Message">
+
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Send us a message</h3>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="firstName" class="text-sm mb-2 block font-medium text-gray-700">First
+                                    Name</label>
+                                <input id="firstName" name="First Name" required
+                                    class="w-full border border-gray-300 px-4 py-3 rounded-lg transition-all duration-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 focus:outline-none"
+                                    placeholder="Jane" />
+                            </div>
+                            <div>
+                                <label for="lastName" class="text-sm mb-2 block font-medium text-gray-700">Last
+                                    Name</label>
+                                <input id="lastName" name="Last Name" required
+                                    class="w-full border border-gray-300 px-4 py-3 rounded-lg transition-all duration-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 focus:outline-none"
+                                    placeholder="Doe" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="email" class="text-sm mb-2 block font-medium text-gray-700">Email</label>
+                            <input id="email" type="email" name="Email" required
+                                class="w-full border border-gray-300 px-4 py-3 rounded-lg transition-all duration-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 focus:outline-none"
+                                placeholder="jane@example.com" />
+                        </div>
+
+                        <div>
+                            <label for="supportType" class="text-sm mb-2 block font-medium text-gray-700">How would you
+                                like to support?</label>
+                            <select id="supportType" name="SupportType" required
+                                class="w-full border border-gray-300 px-4 py-3 rounded-lg transition-all duration-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 focus:outline-none bg-white">
+                                <option value="general" selected>General Inquiry</option>
+                                <option value="volunteering">Volunteering</option>
+                                <option value="donation">Making a Donation</option>
+                                <option value="partnership">Partnership</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="text-sm mb-2 block font-medium text-gray-700">Message</label>
+                            <textarea id="message" name="Message" rows="4" required
+                                class="w-full border border-gray-300 px-4 py-3 rounded-lg transition-all duration-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 focus:outline-none resize-none"
+                                placeholder="Tell us how we can help you..."></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-gray-900 hover:bg-amber-600 text-white px-8 py-4 rounded-lg text-base font-semibold shadow-lg transition duration-300 transform hover:-translate-y-1">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <iframe name="hidden-iframe" style="display:none;"></iframe>
+
+        <div id="thank-you-modal"
+            class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 backdrop-blur-sm transition-opacity">
+            <div class="bg-white rounded-2xl p-8 max-w-md w-full shadow-2xl text-center transform scale-100">
+                <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-6">
+                    <svg class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                </div>
+
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h2>
+                <p class="text-gray-500 mb-8">Thank you for reaching out. A member of our team will get back to you
+                    shortly.</p>
+
+                <button onclick="closeModal()"
+                    class="w-full bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-xl font-medium transition duration-300">
+                    Close
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function showThankYouModal() {
+            // Wait a brief moment to allow the form to submit to the iframe
+            setTimeout(() => {
+                document.getElementById('thank-you-modal').classList.remove('hidden');
+                document.getElementById('thank-you-modal').classList.add('flex');
+                document.getElementById('contact-form').reset(); // Optional: Clear the form
+            }, 500);
+        }
+
+        function closeModal() {
+            document.getElementById('thank-you-modal').classList.add('hidden');
+            document.getElementById('thank-you-modal').classList.remove('flex');
+        }
+    </script>
+
+
+
+    <footer class="bg-gray-900 text-white border-t border-gray-800" id="press">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 mt-10">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-white">HERitage&reg; Collective</h3>
+                    <p class="text-gray-400 leading-relaxed font-normal max-w-sm">
+                        A launchpad for African women leaders and their champions. We gather Africa’s most dynamic women
+                        for powerful days of ideas, influence, and investment.
+                    </p>
+
+                    <!-- <div class="flex items-center gap-2 mb-4">
+                    <span class="px-3 py-1 bg-amber-900/30 text-amber-500 text-xs font-semibold rounded-full border border-amber-800">
+                        Global Leadership Initiative
+                    </span>
+                </div> -->
+
+                    <div class="flex space-x-5">
+                        <a href="linkedin.com/company/heritagecollective" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors transform hover:-translate-y-1">
+                            <i data-lucide="linkedin" class="h-6 w-6"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/heritage.collectiv/" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors transform hover:-translate-y-1">
+                            <i data-lucide="instagram" class="h-6 w-6"></i>
+                        </a>
+
+                        <a href="#" target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors transform hover:-translate-y-1">
+                            <i data-lucide="youtube" class="h-6 w-6"></i>
+                        </a>
+                    </div>
+                    <div class="h-px bg-gray-800 w-full"></div>
+                    <div class="space-y-2">
+                        <a href="mailto:info@heritagecollective.com"
+                            class="flex items-center gap-3 hover:text-amber-500 transition">
+                            <i data-lucide="mail" class="h-5 w-5 text-gray-500"></i>
+                            <span>info@heritagecollectiv.com</span>
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-6">Contact & Locations</h4>
+                    <div class="space-y-6 text-gray-400">
+
+
+
+                        <div class="space-y-4">
+                            <div class="flex gap-3 items-start">
+                                <i data-lucide="map-pin" class="h-5 w-5 text-gray-500 mt-1 shrink-0"></i>
+                                <div>
+                                    <span class="block text-white font-medium text-sm uppercase tracking-wide">Nigeria
+                                        Office</span>
+                                    <span class="text-sm">HERitage House, Abuja,<br>FCT, Nigeria.</span>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-3 items-start">
+                                <i data-lucide="map-pin" class="h-5 w-5 text-gray-500 mt-1 shrink-0"></i>
+                                <div>
+                                    <span class="block text-white font-medium text-sm uppercase tracking-wide">Rwanda
+                                        Office</span>
+                                    <span class="text-sm">KG 54 Avenue, Kigali,<br>Rwanda.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="/partner.html" class="group flex items-start gap-3">
+                                <div class="bg-gray-800 p-2 rounded group-hover:bg-amber-500 transition duration-300">
+                                    <i data-lucide="shield-check"
+                                        class="h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                                </div>
+                                <div>
+                                    <span
+                                        class="block text-white font-medium group-hover:text-amber-500 transition">Privacy
+                                        Policy</span>
+                                    <span class="text-xs text-gray-500">Data protection & terms</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-6">
+
+                        Latest News & Blog</h4>
+                    <ul class="space-y-4">
+
+                        <li>
+                            <a href="https://bgrafrica.com/the-business-case-for-gender-equity-in-africa-data-insights-from-the-heritage-x-mmc-7-0-roundtable/"
+                                target="_blank" class="group flex items-start gap-3">
+                                <div class="bg-gray-800 p-2 rounded group-hover:bg-amber-500 transition duration-300">
+                                    <i data-lucide="newspaper" class="h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                                </div>
+                                <div>
+                                    <span
+                                        class="block text-white font-medium group-hover:text-amber-500 transition">HERitage
+                                        x MMC 7.0 Roundtable</span>
+                                    <span class="text-xs text-gray-500">Dec 05, 2025</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=-IxJW94aXTc" target="_blank"
+                                class="group flex items-start gap-3">
+                                <div class="bg-gray-800 p-2 rounded group-hover:bg-amber-500 transition duration-300">
+                                    <i data-lucide="newspaper" class="h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                                </div>
+                                <div>
+                                    <span
+                                        class="block text-white font-medium group-hover:text-amber-500 transition">HERitage
+                                        Collective Launches in Cote D'ivoire</span>
+                                    <span class="text-xs text-gray-500">May 10, 2025</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://africa.businessinsider.com/local/leaders/heritage-collective-a-bold-new-platform-to-elevate-african-womens-leadership-launches/cekeq1y"
+                                target="_blank" class="group flex items-start gap-3">
+                                <div class="bg-gray-800 p-2 rounded group-hover:bg-amber-500 transition duration-300">
+                                    <i data-lucide="newspaper" class="h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                                </div>
+                                <div>
+                                    <span
+                                        class="block text-white font-medium group-hover:text-amber-500 transition">HERitage:
+                                        Power, Presence, Purpose.</span>
+                                    <span class="text-xs text-gray-500">May 11, 2025</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://omny.fm/shows/africa-rise-shine/heritage-collection-launched-to-empower-emerging-african-women-leaders-1"
+                                target="_blank" class="group flex items-start gap-3">
+                                <div class="bg-gray-800 p-2 rounded group-hover:bg-amber-500 transition duration-300">
+                                    <i data-lucide="newspaper" class="h-5 w-5 text-gray-400 group-hover:text-white"></i>
+                                </div>
+                                <div>
+                                    <span
+                                        class="block text-white font-medium group-hover:text-amber-500 transition">Heritage
+                                        Collection launched to empower emerging African women leaders</span>
+                                    <span class="text-xs text-gray-500">May 23, 2025</span>
+                                </div>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 mt-16 pt-8 text-center">
+                <p class="text-sm text-gray-500">
+                    © 2026 HERitage Collective. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"], .nav-link, .mobile-nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                }
+            });
+        });
+
+        // Contact form handling
+        // 📨 Contact form submission (FormSubmit + hidden iframe + modal)
+        const contactForm = document.getElementById("contact-form");
+        const iframe = document.querySelector("iframe[name='hidden-iframe']");
+        const thankYouModal = document.getElementById("thank-you-modal");
+        const closeBtn = document.getElementById("close-modal");
+
+        // Show modal after form submission finishes
+        iframe.addEventListener("load", function () {
+            // Only show if form was just submitted
+            if (contactForm.dataset.submitted === "true") {
+                thankYouModal.classList.remove("hidden");
+                thankYouModal.classList.add("flex");
+
+                // Reset form
+                contactForm.reset();
+                contactForm.dataset.submitted = "false";
+            }
+        });
+
+        // Intercept form submission
+        contactForm.addEventListener("submit", function () {
+            contactForm.dataset.submitted = "true"; // mark form as submitted
+        });
+
+        // Close modal button
+        closeBtn.addEventListener("click", () => {
+            thankYouModal.classList.add("hidden");
+            thankYouModal.classList.remove("flex");
+        });
+
+        // Optional: close modal on background click
+        thankYouModal.addEventListener("click", (e) => {
+            if (e.target === thankYouModal) {
+                thankYouModal.classList.add("hidden");
+                thankYouModal.classList.remove("flex");
+            }
+        });
+        // Donate button functionality
+        function handleDonate() {
+            // In a real application, this would redirect to a donation page
+            window.location.href = '/partner.html';
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.animate-fade-in, .animate-slide-in-left, .animate-slide-in-right, .animate-slide-in-top, .animate-slide-in-bottom').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 1s ease-out';
+            observer.observe(el);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-white/98');
+                header.classList.remove('bg-white/95');
+            } else {
+                header.classList.add('bg-white/95');
+                header.classList.remove('bg-white/98');
+            }
+        });
+    </script>
+</body>
+
+</html>
