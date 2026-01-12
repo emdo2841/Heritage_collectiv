@@ -107,6 +107,68 @@
             /* Updated SVGs to use #9E2424 */
             background-color: #9E2424;
         }
+
+        .animate-text-swap {
+            display: inline-block;
+            min-height: 1em;
+            /* Cinematic Text Shadow */
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .animate-text-swap::after {
+            content: "";
+            animation: fullSequence 10s infinite;
+        }
+
+        @keyframes fullSequence {
+
+            /* Phase 1: Welcome */
+            0% {
+                content: "Welcome";
+                opacity: 0;
+                transform: translateY(20px);
+                filter: blur(10px);
+            }
+
+            5%,
+            40% {
+                content: "Welcome";
+                opacity: 1;
+                transform: translateY(0);
+                filter: blur(0);
+            }
+
+            /* Transition Out */
+            45% {
+                opacity: 0;
+                transform: translateY(-20px);
+                filter: blur(10px);
+            }
+
+            /* Phase 2: Heritage Collective */
+            50% {
+                content: "We are Heritage Collective";
+                opacity: 0;
+                transform: translateY(20px);
+                filter: blur(10px);
+            }
+
+            55%,
+            90% {
+                content: "We are Heritage Collective";
+                opacity: 1;
+                transform: translateY(0);
+                filter: blur(0);
+            }
+
+            /* Loop Restart */
+            95%,
+            100% {
+                opacity: 0;
+                transform: translateY(-20px);
+                filter: blur(10px);
+            }
+        }
     </style>
 </head>
 
@@ -163,22 +225,26 @@
 
     <!-- NEW YOUTUBE VIDEO SECTION -->
     <div class="w-full bg-[#3E3434] border-b border-[#9E2424]/30">
-        <div class="container mx-auto px-4 py-6 sm:px-6 lg:px-8">
+        <div class="relative w-full aspect-video overflow-hidden shadow-2xl">
 
-            <div
-                class="relative w-full max-w-3xl mx-auto aspect-video rounded-xl overflow-hidden shadow-2xl border border-[#AA9A79]/20">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/lCoRWZtSb2M"
-                    title="HERitage Introduction" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                </iframe>
+            <iframe class="w-full h-full pointer-events-none scale-105"
+                src="https://www.youtube.com/embed/lCoRWZtSb2M?autoplay=1&mute=1&controls=0&loop=1&playlist=lCoRWZtSb2M&rel=0&showinfo=0&iv_load_policy=3"
+                title="HERitage Introduction" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+
+            <div class="absolute inset-0 flex items-center justify-center bg-black/60">
+                <div class="text-center text-white px-4 drop-shadow-2xl">
+                    <h1 class="text-5xl md:text-8xl font-bold tracking-tighter animate-text-swap uppercase italic">
+                    </h1>
+                </div>
             </div>
-
         </div>
     </div>
     <!-- END VIDEO SECTION -->
 
-    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" class="relative h-screen  flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img src="/images/bg.webp" alt="African Women Leaders" class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-[#3E3434]/70"></div>
@@ -232,7 +298,7 @@
                             </div>
                             <div>
                                 <h5 class="text-xl font-medium text-white group-hover:text-[#99754F] transition">
-                                    HERitage @ Davos</h5>
+                                    HERitage @ WEF</h5>
                                 <p class="text-sm text-[#AA9A79] mt-1">World Economic Forum • Switzerland</p>
 
                                 <div class="js-countdown flex items-center gap-3 mt-3 text-xs sans text-[#AA9A79]/80"
@@ -264,7 +330,7 @@
                             </div>
                             <div>
                                 <h5 class="text-xl font-medium text-white group-hover:text-[#99754F] transition">
-                                    HERitage X UNCSW</h5>
+                                    HERitage @ UNCSW</h5>
                                 <p class="text-sm text-[#AA9A79] mt-1">Commission on the Status of Women • NYC</p>
 
                                 <div class="js-countdown flex items-center gap-3 mt-3 text-xs sans text-[#AA9A79]/80"
@@ -295,7 +361,7 @@
                             </div>
                             <div>
                                 <h5 class="text-xl font-medium text-white group-hover:text-[#99754F] transition">
-                                    HERitage X UNGA</h5>
+                                    HERitage @ UNGA</h5>
                                 <p class="text-sm text-[#AA9A79] mt-1">General Assembly • New York</p>
 
                                 <div class="js-countdown flex items-center gap-3 mt-3 text-xs sans text-[#FFFFF5]/80"
@@ -372,51 +438,45 @@
         </div>
     </div>
 
-    <div class="w-full flex justify-center py-12 bg-[#FFFFF5]" id="about">
-        <div class="w-[80%] max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 mt-10">
-            <div
-                class="border border-[#AA9A79]/30 bg-[#FFFFF5] rounded-2xl p-6 text-center hover:border-[#9E2424] hover:shadow-xl transition duration-300 group transform hover:scale-105 hover:z-10">
-                <h3 class="text-4xl font-bold text-[#3E3434] group-hover:text-[#9E2424] mb-2">3</h3>
-                <p class="text-sm font-semibold uppercase tracking-wider text-[#99754F]">Continents Represented</p>
-                <!-- <p class="text-xs text-[#AF7B79] mt-2">Global Reach</p> -->
-            </div>
-            <div
-                class="border border-[#AA9A79]/30 bg-[#FFFFF5] rounded-2xl p-6 text-center hover:border-[#9E2424] hover:shadow-xl transition duration-300 group transform hover:scale-105 hover:z-10">
-                <h3 class="text-4xl font-bold text-[#3E3434] group-hover:text-[#9E2424] mb-2">20+</h3>
-                <p class="text-sm font-semibold uppercase tracking-wider text-[#99754F]">Countries Represented</p>
-                <!-- <p class="text-xs text-[#AF7B79] mt-2">Pan-African Reach</p> -->
-            </div>
+    <div class="w-full flex justify-center py-16 bg-[#FFFFF5]" id="about">
+    <div class="w-[90%] max-w-5xl">
+        <div class="relative border border-[#AA9A79]/30 bg-white/50 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-sm hover:border-[#9E2424]/50 transition duration-500 group">
+            
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#AA9A79]/10 to-transparent rounded-tr-3xl"></div>
 
-            <div
-                class="border border-[#AA9A79]/30 bg-[#FFFFF5] rounded-2xl p-6 text-center hover:border-[#9E2424] hover:shadow-xl transition duration-300 group transform hover:scale-105 hover:z-10">
-                <h3 class="text-4xl font-bold text-[#3E3434] group-hover:text-[#9E2424] mb-2">767+</h3>
-                <p class="text-sm font-semibold uppercase tracking-wider text-[#99754F]">Women <br> Leaders</p>
-                <!-- <p class="text-xs text-[#AF7B79] mt-2">Active Network</p> -->
-            </div>
+            <div class="relative z-10">
+                <div class="inline-block px-4 py-1 rounded-full border border-[#9E2424] text-[#9E2424] text-xs font-bold uppercase tracking-widest mb-6">
+                    2025 Year in Review
+                </div>
 
-            <div
-                class="border border-[#AA9A79]/30 bg-[#FFFFF5] rounded-2xl p-6 text-center hover:border-[#9E2424] hover:shadow-xl transition duration-300 group transform hover:scale-105 hover:z-10">
-                <h3 class="text-4xl font-bold text-[#3E3434] group-hover:text-[#9E2424] mb-2">$340M</h3>
-                <p class="text-sm font-semibold uppercase tracking-wider text-[#99754F]">Capital Mobilized</p>
-                <!-- <p class="text-xs text-[#AF7B79] mt-2">For Women-Led SMEs</p> -->
-            </div>
+                <h2 class="text-2xl md:text-4xl font-serif text-[#3E3434] leading-relaxed mb-8">
+                    In 2025, <span class="text-[#9E2424] font-bold">HERitage</span> convened over <span class="border-b-2 border-[#AA9A79]/40">700 participants</span> across four high-level convenings, engaging representatives from 57+ countries and 150+ organizations.
+                </h2>
 
-            <div
-                class="border border-[#AA9A79]/30 bg-[#FFFFF5] rounded-2xl p-6 text-center hover:border-[#9E2424] hover:shadow-xl transition duration-300 group transform hover:scale-105 hover:z-10">
-                <h3 class="text-4xl font-bold text-[#3E3434] group-hover:text-[#9E2424] mb-2">150+</h3>
-                <p class="text-sm font-semibold uppercase tracking-wider text-[#99754F]">organizations engaged</p>
-                <!-- <p class="text-xs text-[#AF7B79] mt-2">From Davos to NYC</p> -->
-            </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                    <p class="text-lg text-[#3E3434]/80 leading-relaxed font-light">
+                        Through strategic engagements at Abidjan, the United Nations General Assembly, the G20, and MMC, HERitage strengthened its position as a pan-African platform with global policy influence.
+                    </p>
+                    <div class="border-l-4 border-[#9E2424] pl-6 py-2">
+                        <p class="text-lg text-[#99754F] font-medium italic">
+                            "Balancing scale, diversity, and depth of engagement to activate dialogue across multiple continents."
+                        </p>
+                    </div>
+                </div>
 
-            <div
-                class="border border-[#AA9A79]/30 bg-[#FFFFF5] rounded-2xl p-6 text-center hover:border-[#9E2424] hover:shadow-xl transition duration-300 group transform hover:scale-105 hover:z-10">
-                <h3 class="text-4xl font-bold text-[#3E3434] group-hover:text-[#9E2424] mb-2">80%</h3>
-                <p class="text-sm font-semibold uppercase tracking-wider text-[#99754F]">Pan-African majority</p>
-                <!-- <p class="text-xs text-[#AF7B79] mt-2">Sustainable Growth</p> -->
+                <div class="mt-10 flex flex-wrap gap-4 items-center text-[#AF7B79] text-sm font-semibold uppercase tracking-widest">
+                    <span>Abidjan</span>
+                    <span class="w-1.5 h-1.5 bg-[#9E2424] rounded-full"></span>
+                    <span>UNGA</span>
+                    <span class="w-1.5 h-1.5 bg-[#9E2424] rounded-full"></span>
+                    <span>G20</span>
+                    <span class="w-1.5 h-1.5 bg-[#9E2424] rounded-full"></span>
+                    <span>MMC</span>
+                </div>
             </div>
         </div>
     </div>
-
+</div>
     <div class="w-full flex justify-center py-16 bg-[#FFFFF5]">
         <div class="w-[90%] max-w-7xl flex flex-col lg:flex-row items-center gap-12">
             <div class="lg:w-1/4 text-center lg:text-left shrink-0">
@@ -432,7 +492,7 @@
                 <div class="absolute top-0 right-0 z-10 h-full w-20 bg-gradient-to-l from-[#FFFFF5] to-transparent">
                 </div>
 
-                <div class="flex items-center gap-16 animate-scroll w-[200%] hover:[animation-play-state:paused]">
+                <div class="flex items-center gap-16 animate-scroll w-max hover:[animation-play-state:paused]">
                     <div class="flex items-center gap-16 justify-around w-1/2">
                         <img src="/images/heritage-sponsor-image.png" alt="Partner 1"
                             class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
@@ -444,10 +504,63 @@
                             class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
                         <img src="/images/heritage-sponsor-image4.png" height="50px" alt="Partner 4"
                             class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+
+
+
+
+                    </div>
+                    <div class="flex items-center gap-16 justify-around w-1/2">
                         <img src="/images/heritage-sponsor-image5.png" height="50px" alt="Partner 4"
                             class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                        <img src="/images/heritage-sponsor-image7.png" alt="Partner 1"
+                            class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                        <img src="/images/heritage-sponsor-image8.png" alt="Partner 2"
+                            class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                        <img src="/images/heritage-sponsor-image9.jpeg" alt="Partner 3"
+                            class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                        <img src="/images/heritage-sponsor-image10.png" alt="Partner 4"
+                            class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
                     </div>
+                    <div class="flex items-center gap-16 justify-around w-1/2">
+                        <img src="/images/heritage-sponsor-image11.png" height="50px" alt="Partner 4"
+                            class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                        <img src="/images/heritage-sponsor-image12.png" height="50px" alt="Partner 4"
+                            class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                        <img src="/images/heritage-sponsor-image13.png" alt="Partner 1"
+                            class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                        <img src="/images/heritage-sponsor-image14.png" alt="Partner 2"
+                            class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                        <img src="/images/heritage-sponsor-image15.png" alt="Partner 3"
+                            class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
 
+                    </div>
+                    <div class="flex items-center gap-16 justify-around w-1/2">
+                        <img src="/images/heritage-sponsor-image16.jpg" alt="Partner 4"
+                            class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                        <img src="/images/heritage-sponsor-image17.png" height="50px" alt="Partner 4"
+                            class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                        <img src="/images/heritage-sponsor-image18.png" height="50px" alt="Partner 4"
+                            class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                        <img src="/images/heritage-sponsor-image19.png" alt="Partner 1"
+                            class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                        <img src="/images/heritage-sponsor-image20.png" alt="Partner 2"
+                            class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                    </div>
+                    <div class="flex items-center gap-16 justify-around w-1/2">
+                        <img src="/images/heritage-sponsor-image21.png" alt="Partner 3"
+                            class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                        <img src="/images/heritage-sponsor-image22.png" alt="Partner 4"
+                            class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                        <img src="/images/heritage-sponsor-image23.png" alt="Partner 3"
+                            class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                        <img src="/images/heritage-sponsor-image24.png" height="50px" alt="Partner 4"
+                            class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                        <img src="/images/heritage-sponsor-image26.png" height="50px" alt="Partner 4"
+                            class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+                        <img src="/images/heritage-sponsor-image27.png" alt="Partner 3"
+                            class="h-24 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300">
+
+                    </div>
 
                     <!-- <div class="flex items-center gap-16 justify-around w-1/2">
                     <img src="/images/MINISTRY_OF_ART.png" alt="Partner 1"
@@ -517,6 +630,10 @@
                         class="relative w-48 h-48 mb-6 rounded-3xl overflow-hidden border-2 border-[#AA9A79]/30 transition duration-500 ease-in-out shadow-lg transform group-hover:scale-110 group-hover:border-[#9E2424]">
                         <img src="/images/boss.avif" alt="Team Member"
                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                        <a href="https://www.linkedin.com/in/habibah-a-w/" target="_blank"
+                            class="absolute inset-0 bg-[#9E2424]/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i data-lucide="linkedin" class="w-8 h-8 text-white"></i>
+                        </a>
                     </div>
                     <h4 class="text-lg font-bold text-[#3E3434] group-hover:text-[#9E2424] transition">Haibibah A.
                         Waziri</h4>
@@ -529,6 +646,10 @@
                         class="relative w-48 h-48 mb-6 rounded-3xl overflow-hidden border-2 border-[#AA9A79]/30 transition duration-500 ease-in-out shadow-lg transform group-hover:scale-110 group-hover:border-[#9E2424]">
                         <img src="/images/sally.avif" alt="Team Member"
                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                        <a href="https://www.linkedin.com/in/sallynnamani/" target="_blank"
+                            class="absolute inset-0 bg-[#9E2424]/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i data-lucide="linkedin" class="w-8 h-8 text-white"></i>
+                        </a>
                     </div>
                     <h4 class="text-lg font-bold text-[#3E3434] group-hover:text-[#9E2424] transition">Sally Nnamani
                     </h4>
@@ -541,6 +662,10 @@
                         class="relative w-48 h-48 mb-6 rounded-3xl overflow-hidden border-2 border-[#AA9A79]/30 transition duration-500 ease-in-out shadow-lg transform group-hover:scale-110 group-hover:border-[#9E2424]">
                         <img src="/images/sandrine.avif" alt="Team Member"
                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                        <a href="https://www.linkedin.com/in/sandrine-nzeukou-sports-business/" target="_blank"
+                            class="absolute inset-0 bg-[#9E2424]/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i data-lucide="linkedin" class="w-8 h-8 text-white"></i>
+                        </a>
                     </div>
                     <h4 class="text-lg font-bold text-[#3E3434] group-hover:text-[#9E2424] transition">Sandrine Nzeukou
                     </h4>
@@ -553,6 +678,10 @@
                         class="relative w-48 h-48 mb-6 rounded-3xl overflow-hidden border-2 border-[#AA9A79]/30 transition duration-500 ease-in-out shadow-lg transform group-hover:scale-110 group-hover:border-[#9E2424]">
                         <img src="/images/hug.avif" alt="Team Member"
                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                        <a href="https://www.linkedin.com/in/umutonihuguette/" target="_blank"
+                            class="absolute inset-0 bg-[#9E2424]/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i data-lucide="linkedin" class="w-8 h-8 text-white"></i>
+                        </a>
                     </div>
                     <h4 class="text-lg font-bold text-[#3E3434] group-hover:text-[#9E2424] transition">Huguette Umutoni
                     </h4>
@@ -565,6 +694,10 @@
                         class="relative w-48 h-48 mb-6 rounded-3xl overflow-hidden border-2 border-[#AA9A79]/30 transition duration-500 ease-in-out shadow-lg transform group-hover:scale-110 group-hover:border-[#9E2424]">
                         <img src="/images/Fatima.jpeg" alt="Team Member"
                             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                        <a href="#" target="_blank"
+                            class="absolute inset-0 bg-[#9E2424]/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i data-lucide="linkedin" class="w-8 h-8 text-white"></i>
+                        </a>
                     </div>
                     <h4 class="text-lg font-bold text-[#3E3434] group-hover:text-[#9E2424] transition">Fatima Soleman
                     </h4>
