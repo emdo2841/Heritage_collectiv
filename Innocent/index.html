@@ -117,22 +117,28 @@
 
         .animate-text-swap::after {
             content: "";
-            animation: fullSequence 10s infinite;
+            animation: fullSequence 30s infinite;
         }
 
         @keyframes fullSequence {
 
             /* Phase 1: Welcome */
-            0% {
+            10% {
                 content: "Welcome";
                 opacity: 0;
                 transform: translateY(20px);
                 filter: blur(10px);
             }
 
-            5%,
-            40% {
+            25%,
+            20% {
                 content: "Welcome";
+                opacity: 1;
+                transform: translateY(0);
+                filter: blur(0);
+            }
+            40% {
+                content: "We are Heritage Collective";
                 opacity: 1;
                 transform: translateY(0);
                 filter: blur(0);
@@ -146,16 +152,16 @@
             }
 
             /* Phase 2: Heritage Collective */
-            50% {
-                content: "We are Heritage Collective";
+            60% {
+                content: "we bridge the gap between cultural talent and the capital needed to scale woman-led ventures";
                 opacity: 0;
                 transform: translateY(20px);
                 filter: blur(10px);
             }
 
             55%,
-            90% {
-                content: "We are Heritage Collective";
+            80% {
+                content: "Together, we are building a sustainable ecosystem that empowering women";
                 opacity: 1;
                 transform: translateY(0);
                 filter: blur(0);
@@ -236,7 +242,7 @@
 
             <div class="absolute inset-0 flex items-center justify-center bg-black/60">
                 <div class="text-center text-white px-4 drop-shadow-2xl">
-                    <h1 class="text-5xl md:text-8xl font-bold tracking-tighter animate-text-swap uppercase italic">
+                    <h1 class="text-3xl sans md:text-6xl font-bold tracking-tighter animate-text-swap uppercase italic">
                     </h1>
                 </div>
             </div>
@@ -450,16 +456,17 @@
                 </div>
 
                 <h2 class="text-2xl md:text-4xl font-serif text-[#3E3434] leading-relaxed mb-8">
-                    In 2025, <span class="text-[#9E2424] font-bold">HERitage</span> convened over <span class="border-b-2 border-[#AA9A79]/40">700 participants</span> across four high-level convenings, engaging representatives from 57+ countries and 150+ organizations.
+                    In 2025, <span class="text-[#9E2424] font-bold">HERitage</span> convened over <span class="border-b-2 border-[#AA9A79]/40">700 participants</span> across four high-level convenings, engaging representatives from 57+ countries and 316+ organizations,
                 </h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                     <p class="text-lg text-[#3E3434]/80 leading-relaxed font-light">
-                        Through strategic engagements at Abidjan, the United Nations General Assembly, the G20, and MMC, HERitage strengthened its position as a pan-African platform with global policy influence.
+                        and activating dialogue across multiple continents.
+Through strategic engagements at Abidjan, the United Nations General Assembly, the G20, and MMC 7.0, HERitage strengthened its position as a pan-African platform with global policy influence.
                     </p>
                     <div class="border-l-4 border-[#9E2424] pl-6 py-2">
                         <p class="text-lg text-[#99754F] font-medium italic">
-                            "Balancing scale, diversity, and depth of engagement to activate dialogue across multiple continents."
+                            balancing scale, diversity, and depth of engagement.
                         </p>
                     </div>
                 </div>
