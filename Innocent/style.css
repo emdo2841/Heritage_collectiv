@@ -25,6 +25,14 @@
 .mobile-menu {
     transition: all 0.3s ease-in-out;
 }
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); } /* Moves exactly half the total width */
+}
+
+.animate-scroll {
+  animation: scroll 60s linear infinite; /* Increase 60s to make it slower */
+}
 
 /* Scroll indicator animation */
 @keyframes bounce {
@@ -52,4 +60,19 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+}
+.sponsor-logo {
+  width: 160px;        /* FORCE same width */
+  height: 80px;        /* FORCE same height */
+  object-fit: contain; /* keep logo proportions */
+  flex-shrink: 0;
+
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.sponsor-logo:hover {
+  filter: grayscale(0);
+  opacity: 1;
 }
